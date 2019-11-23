@@ -49,6 +49,9 @@ cityreader(cities)
 for c in cities:
     print(c)
 
+
+print("---")
+
 # STRETCH GOAL!
 #
 # Allow the user to input two points, each specified by latitude and longitude.
@@ -88,7 +91,6 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
   # Go through each city and check to see if it falls within 
   # the specified coordinates.
   for city in cities:
-    print(city.name, min(lat1, lat2) <= city.lat <= max(lat1, lat2))
     if min(lat1, lat2) <= city.lat <= max(lat1, lat2) and min(lon1, lon2) <= city.lon <= max(lon1, lon2):
       within.append(city)
 
