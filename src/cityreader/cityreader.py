@@ -36,10 +36,12 @@ def cityreader(cities=[]):
   # `cities` list
   f = open('src/cityreader/cities.csv')
   csv_f = csv.reader(f)
-  
+
   for i, row in enumerate(csv_f):
     if i > 0:
       cities.append(City(row[0], float(row[3]), float(row[4]))) 
+  
+  f.close()
 
   return cities
 
